@@ -1,4 +1,4 @@
-package com.azhen.bio;
+package com.azhen.timeserver.bio;
 
 import java.io.IOException;
 import java.net.ServerSocket;

@@ -1,10 +1,10 @@
-package com.azhen.aio;
+package com.azhen.timeserver.aio;
 
 /**
  * @author Azhen
  * @date 2017/12/29
  */
-public class TimeClient {
+public class TimeServer {
     public static void main(String[] args) {
         int port = 8081;
         if (args != null && args.length > 0) {
@@ -15,7 +15,7 @@ public class TimeClient {
             }
         }
 
-        AsyncTimeClientHandler timeServer = new AsyncTimeClientHandler("127.0.0.1" ,port);
-        new Thread(timeServer, "AIO-AsyncTimeClientHandler-001").start();
+        AsyncTimeServerHandler timeServer = new AsyncTimeServerHandler(port);
+        new Thread(timeServer, "AIO-AsyncTimeServerHandler-001").start();
     }
 }
